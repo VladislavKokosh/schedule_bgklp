@@ -1,0 +1,26 @@
+.header {
+  background-color: #3a547f;
+  &__container {
+    max-width: 1670px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__wrapper {
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+  &__logo {
+    height: 40px;
+    width: 40px;
+    padding-right: 240px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

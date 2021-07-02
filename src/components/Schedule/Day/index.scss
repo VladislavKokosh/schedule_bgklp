@@ -1,0 +1,25 @@
+.day {
+  border: 2px solid grey;
+  width: 600px;
+  margin: 5px auto;
+  &__name {
+    padding-left: 7px;
+    background-color: rgba(81, 104, 140, 0.88);
+    color: #fff;
+  }
+  &__title {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #4b687f;
+    color: #fff;
+  }
+  &__discipline {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    &_time {
+      font-weight: bolder;
+    }
+  }
+}

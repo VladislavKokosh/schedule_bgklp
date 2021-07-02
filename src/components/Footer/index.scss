@@ -1,0 +1,49 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid lightgray;
+  &__container {
+    max-width: 1670px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__wrapper {
+    position: relative;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    &_logo{
+      width: 50px;
+      height: 50px;
+    }
+    &_copy {
+      margin-top: 25  px;
+      width: 200px;
+      text-align: center;
+      color: #6f6f6f;
+      font-size: 12px;
+    }
+    &_text {
+      width: 200px;
+      text-align: center;
+      color: #6f6f6f;
+      font-size: 12px;
+    }
+  }
+
+  &__info {
+    font-size: 1em !important;
+    text-align: center;
+    max-width: 535px;
+    &-item {
+      font-size: 1em !important;
+    }
+  }
+}
