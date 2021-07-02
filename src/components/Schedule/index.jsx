@@ -15,9 +15,11 @@ const Schedule = () => {
 }, [group])
   return(
     <div className='schedule'>
-      {schedule.map((day, index) =>
-        <Day key={index} day={day}/>
-      )}
+      {group === 'Выберите группу...' ? null :
+        schedule.map((day, index) =>
+          <Day key={index} day={day}/>
+        )
+      }
     </div>
   )
 }
