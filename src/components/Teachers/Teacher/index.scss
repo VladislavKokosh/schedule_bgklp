@@ -1,0 +1,9 @@
+.teacher {
+  display: flex;
+  padding: 5px;
+  &__img {
+    padding-right: 5px;
+    width: 100px;
+    height: 120px;
+  }
+}

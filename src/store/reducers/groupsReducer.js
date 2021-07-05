@@ -1,5 +1,6 @@
 import
     {
+        CLEAR_GROUP,
         GET_GROUP,
         GET_GROUP_FAILURE,
         SET_GROUP
@@ -20,6 +21,8 @@ export const groupsReducer = (state = initState, action) => {
             return { ...state, error: action.payload}
         case SET_GROUP:
             return { ...state, group: action.payload}
+        case CLEAR_GROUP:
+            return { ...state, group: null}
         default: return state
     }
 }

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import
 	{
+		CLEAR_GROUP,
 		GET_GROUP,
 		GET_GROUP_FAILURE,
 		SET_GROUP
@@ -39,3 +40,7 @@ export const setGroups = group => (
 		payload: group
 	}
 )
+
+export const clearGroup = () => ({
+	type: CLEAR_GROUP
+})

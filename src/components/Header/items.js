@@ -8,6 +8,10 @@ export const items = [
     link: '/disciplines'
   },
   {
+    title: 'Наши преподаватели',
+    link: '/teachers'
+  },
+  {
     title: 'Телефонный справочник',
     link: '/directory'
   }

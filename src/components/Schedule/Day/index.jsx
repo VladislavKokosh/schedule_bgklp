@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Disciplines from './Disciplines'
+import Discipline from './Discipline'
 import './index.scss'
 
 const Day = ({ day }) => {
@@ -14,7 +14,7 @@ const Day = ({ day }) => {
         <span>Кабинет:</span>
       </div>
         {day.disciplines.map((discipline, index) =>(
-          <Disciplines disciplines={discipline} key={index}/>
+          <Discipline discipline={discipline} key={index}/>
         ))}
     </div>
   )
