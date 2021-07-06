@@ -40,6 +40,7 @@ const Discipline = ({ discipline }) => {
             <img
               style={selectTeacher?.img ? {width:'120px', height: '150px'} : {width:'100px', height: '100px'}}
               src={selectTeacher?.img ? selectTeacher.img : LOADING}
+              alt=''
             />
             {selectTeacher != null ? selectTeacher.about : 'Загрузка...'}
           </div>
