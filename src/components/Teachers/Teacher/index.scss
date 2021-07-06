@@ -1,9 +1,35 @@
 .teacher {
-  display: flex;
+  margin: 20px;
   padding: 5px;
-  &__img {
-    padding-right: 5px;
-    width: 100px;
-    height: 120px;
+  height: 330px;
+  width: 270px;
+  background: grey;
+  border-radius: 10px;
+  transition: background(0.8s);
+  overflow: hidden;
+  box-shadow: 0 70px 63px -60px #000000;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-size: 300px;
+  @media(max-width: 1250px){
+    height: 290px;
+    width: 220px;
+  }
+  &:hover {
+    h4 {
+      opacity: 1;
+    }
+  }
+  h2 {
+    color: white;
+    margin: 20px;
+  }
+
+  h4 {
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
   }
 }

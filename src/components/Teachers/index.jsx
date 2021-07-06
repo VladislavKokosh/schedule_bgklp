@@ -11,7 +11,7 @@ const Teachers = () => {
   const teachers = useSelector(state => state.teachers.teachers)
   const isLoading = useSelector(state => state.loading.isLoading)
   useEffect(()=> {
-    dispatch(getTeachersAsync())
+    !teachers.length && dispatch(getTeachersAsync())
      // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 
@@ -19,7 +19,7 @@ const Teachers = () => {
     <div className='teachers'>
       {isLoading ?
         <Loader/>:
-        teachers.map(teacher => <Teacher teacher={teacher}/>)
+        teachers.map(teacher => <Teacher teacher={teacher} key={teacher.id}/>)
       }
     </div>
   )

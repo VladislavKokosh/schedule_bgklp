@@ -10,7 +10,9 @@ h4 {
 .select {
   margin: auto;
   width: 600px;
-  position: relative;
+  @media(max-width: 600px){
+    width: 300px;
+  }
 }
 
 .select select {
@@ -26,20 +28,9 @@ h4 {
   font-family: inherit;/* наследует от родителя */
   font-size: 1rem;
   color: #444;
-}
-
-.select:after {
-  content: "";
-  display: block;
-  border-style: solid;
-  border-width: 6px 5px 0 5px;
-  border-color: #000 transparent transparent transparent;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  z-index: 1;
-  margin-top: -3px;
+  @media(max-width: 600px){
+    width: 300px;
+  }
 }
 
 option {

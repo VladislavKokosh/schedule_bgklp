@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import Header from './components/Header'
+import MainHeader from './components/MainHeader';
 // import Footer from './components/Footer';
 import Routes from './Routes/index'
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-      <Header/>
+      <MainHeader/>
       <Routes/>
       {/* <Footer/> */}
       </div>

@@ -19,7 +19,7 @@ const Groups = () => {
   }
 
   return(
-    <div>
+    <div className='group'>
       <h2>Расписание занятий для студентов БГКЛП</h2>
       <h4>{date.getMonth() > 6 ? 'первый семестр, '+(date.getFullYear()-1)+'-'+date.getFullYear()+' учебный год': 'второй семестр, '+(date.getFullYear()-1)+'-'+date.getFullYear()+' учебный год'}</h4>
       <div className='select'>

@@ -4,10 +4,6 @@ export const items = [
     link: '/schedule'
   },
   {
-    title: 'Перечень дисциплин',
-    link: '/disciplines'
-  },
-  {
     title: 'Наши преподаватели',
     link: '/teachers'
   },
