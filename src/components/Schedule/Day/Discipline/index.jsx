@@ -11,7 +11,7 @@ const Discipline = ({ discipline }) => {
 
   const Change = () => {
     dispatch(selectTeacherAsync(discipline.teacher))
-    setVisableModal('block')
+    setVisableModal('flex')
   }
 
   const reChange = () => {

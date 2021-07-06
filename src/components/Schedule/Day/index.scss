@@ -43,6 +43,12 @@
       position: relative;
       width: 150px;
       &-about {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
         background-color: white;
         margin: 5px;
         padding: 5px;
