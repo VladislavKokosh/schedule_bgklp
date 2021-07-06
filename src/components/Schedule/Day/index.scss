@@ -28,10 +28,34 @@
       font-size: 12px;
     }
     &_time {
+      width: 80px;
       font-weight: bolder;
       @media(max-width: 600px){
         font-size: 10px;
       }
+    }
+
+    &_name {
+      width: 100px;
+    }
+
+    &_teacher {
+      position: relative;
+      width: 150px;
+      &-about {
+        background-color: white;
+        margin: 5px;
+        padding: 5px;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 30px 40px -20px gray;
+        border-top: 3px solid #3a547f;
+      }
+    }
+
+    &_cabinet {
+      width: 30px;
     }
   }
 }
