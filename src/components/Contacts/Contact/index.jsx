@@ -8,7 +8,7 @@ const Contact = ({ contact }) => {
         <span className='contacts__item_about-position'>{contact.position} </span>
         <a
           className='contacts__item_about-phone'
-          href={`tel${contact.phone}`}
+          href={`tel:${contact.phone}`}
         >
           {contact.phone}
         </a>
