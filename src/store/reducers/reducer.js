@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { contactsReducer } from './contactsReducer'
 import { groupsReducer } from './groupsReducer'
 import { loaderReducer } from './loaderReducer'
 import { scheduleReducer } from './scheduleReducer'
@@ -8,5 +9,6 @@ export const reducer = combineReducers({
     groups: groupsReducer,
     schedule: scheduleReducer,
     loading: loaderReducer,
-    teachers: teachersReducer
+    teachers: teachersReducer,
+    contacts: contactsReducer
 })

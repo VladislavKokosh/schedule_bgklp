@@ -1,0 +1,18 @@
+.contacts {
+  padding: 0 100px 20px 40px;
+  @media(max-width: 600px){
+    padding: 0 20px 20px 20px;
+  }
+  &__item {
+    border-bottom: 1px solid #3a547f;
+    &_title {
+      text-align: left;
+    }
+    &_about {
+      padding-bottom: 10px;
+      &-position {
+        font-weight: bolder;
+      }
+    }
+  }
+}
