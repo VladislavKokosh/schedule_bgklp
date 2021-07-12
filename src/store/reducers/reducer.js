@@ -6,9 +6,9 @@ import { scheduleReducer } from './scheduleReducer'
 import { teachersReducer } from './teachersReducer'
 
 export const reducer = combineReducers({
-    groups: groupsReducer,
-    schedule: scheduleReducer,
-    loading: loaderReducer,
-    teachers: teachersReducer,
-    contacts: contactsReducer
+  groups: groupsReducer,
+  schedule: scheduleReducer,
+  loading: loaderReducer,
+  teachers: teachersReducer,
+  contacts: contactsReducer
 })

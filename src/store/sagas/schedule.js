@@ -1,8 +1,15 @@
-import { put, call } from 'redux-saga/effects'
 import axios from 'axios'
+import { put, call } from 'redux-saga/effects'
 
-import { hideLoader, showLoader } from '../actions/loader';
-import { getScheduleAsynsFailure, getScheduleAsynsSuccess } from '../actions/schedule';
+import {
+  getScheduleAsynsFailure,
+  getScheduleAsynsSuccess
+} from '../actions/schedule';
+
+import {
+  hideLoader,
+  showLoader
+} from '../actions/loader';
 
 export function* getSchedule({ payload }) {
   try {

@@ -1,16 +1,16 @@
 import
-    {
-        GET_TEACHERS_FAILURE,
-        GET_TEACHERS_SUCCESS,
-        SELECT_TEACHERS_FAILURE,
-        SELECT_TEACHERS_SUCCESS
-    }
+  {
+    GET_TEACHERS_FAILURE,
+    GET_TEACHERS_SUCCESS,
+    SELECT_TEACHERS_FAILURE,
+    SELECT_TEACHERS_SUCCESS
+  }
 from "../types/teachers"
 
 const initState = {
-    teachers: [],
-    error: '',
-    selectTeacher: null
+  teachers: [],
+  error: '',
+  selectTeacher: null
 }
 
 export const teachersReducer = (state = initState, action) => {

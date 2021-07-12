@@ -1,7 +1,15 @@
-import { put, call } from 'redux-saga/effects'
 import axios from 'axios'
-import { hideLoader, showLoader } from '../actions/loader'
-import { getContactsAsyncFailure, getContactsAsyncSuccess } from '../actions/contacts';
+import { put, call } from 'redux-saga/effects'
+
+import {
+  getContactsAsyncFailure,
+  getContactsAsyncSuccess
+} from '../actions/contacts';
+
+import {
+  hideLoader,
+  showLoader
+} from '../actions/loader'
 
 export function* getContacts() {
   try {
