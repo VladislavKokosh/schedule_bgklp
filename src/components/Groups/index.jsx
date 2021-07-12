@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { getGroupsAsync, setGroups } from '../../store/actions/groups';
+import { getGroupsAsync, setGroupsAsync } from '../../store/actions/groups';
 import './index.scss'
 
 const Groups = () => {
@@ -15,7 +15,7 @@ const Groups = () => {
   let date = new Date();
 
   const selectGroup = (e) => {
-    dispatch(setGroups(e.target.value))
+    dispatch(setGroupsAsync(e.target.value))
   }
 
   return(

@@ -1,45 +1,45 @@
-import axios from 'axios'
 import
 	{
-		CLEAR_GROUP,
 		GET_GROUP,
 		GET_GROUP_FAILURE,
-		SET_GROUP
+		GET_GROUP_SUCCESS,
+		SET_GROUP,
+		SET_GROUP_FAILURE,
+		SET_GROUP_SUCCESS,
+		CLEAR_GROUP
 	}
 from '../types/groups'
 
-export const getGroups = groups => (
-	{
-		type: GET_GROUP,
-		payload: groups
-	}
-)
+export const getGroupsAsync = () => ({
+	type: GET_GROUP
+})
 
-export const getGroupsFailure = error => (
-	{
-			type: GET_GROUP_FAILURE,
-			payload: error
-	}
-)
+export const getGroupsAsyncSuccess = data => ({
+	type: GET_GROUP_SUCCESS,
+	payload: data
+})
 
-export const getGroupsAsync = () => {
-	return async (dispatch) => {
-		try {
-			const { data } = await axios.get('https://my-json-server.typicode.com/iamkoks/shedule_db/group')
-			dispatch(getGroups(data))
-		}
-		catch(error) {
-			dispatch(getGroupsFailure(error))
-		}
-	}
-}
+export const getGroupsAsyncFailure = data => ({
+	type: GET_GROUP_FAILURE,
+	payload: data
+})
 
-export const setGroups = group => (
+export const setGroupsAsync = group => (
 	{
 		type: SET_GROUP,
 		payload: group
 	}
 )
+
+export const setGroupsAsyncSuccess = data => ({
+	type: SET_GROUP_SUCCESS,
+	payload: data
+})
+
+export const setGroupsAsyncFailure = data => ({
+	type: SET_GROUP_FAILURE,
+	payload: data
+})
 
 export const clearGroup = () => ({
 	type: CLEAR_GROUP

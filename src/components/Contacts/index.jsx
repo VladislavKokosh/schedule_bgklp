@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getContactssAsync } from '../../store/actions/contacts';
+import { getContactsAsync } from '../../store/actions/contacts';
 
 import Loader from '../Loader';
 import Contact from './Contact';
@@ -12,7 +12,7 @@ const Contacts = () => {
   const contacts = useSelector(state => state.contacts.contacts)
   const isLoading = useSelector(state => state.loading.isLoading)
   useEffect(()=> {
-    dispatch(getContactssAsync())
+    dispatch(getContactsAsync())
      // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [])
 

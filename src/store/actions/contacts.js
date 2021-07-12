@@ -1,36 +1,27 @@
-import axios from 'axios'
 import
 	{
     GET_CONTACTS,
-    GET_CONTACTS_FAILURE
+    GET_CONTACTS_FAILURE,
+    GET_CONTACTS_SUCCESS
   }
 from '../types/contatcs'
-import { showLoader, hideLoader } from './loader'
 
-export const getContacts = contacts => (
+export const getContactsAsync = () => (
 	{
 		type: GET_CONTACTS,
-		payload: contacts
 	}
 )
 
-export const getContactsFailure = error => (
+export const getContactsAsyncSuccess = data => (
+	{
+			type: GET_CONTACTS_SUCCESS,
+			payload: data
+	}
+)
+
+export const getContactsAsyncFailure = error => (
 	{
 			type: GET_CONTACTS_FAILURE,
 			payload: error
 	}
 )
-
-export const getContactssAsync = () => {
-	return async (dispatch) => {
-		try {
-      dispatch(showLoader())
-			const { data } = await axios.get('https://my-json-server.typicode.com/iamkoks/shedule_db/contacts')
-			dispatch(getContacts(data))
-      dispatch(hideLoader())
-		}
-		catch(error) {
-			dispatch(getContactsFailure(error))
-		}
-	}
-}

@@ -1,37 +1,28 @@
-import axios from 'axios'
 import
 	{
 		GET_SCHEDULE,
 		GET_SCHEDULE_FAILURE,
+    GET_SCHEDULE_SUCCESS,
 	}
 from '../types/schedule'
-import { showLoader, hideLoader } from '../../store/actions/loader'
 
-export const getSchedule = schedule => (
+export const getScheduleAsyns = group => (
 	{
 		type: GET_SCHEDULE,
-		payload: schedule
+    payload: group
 	}
 )
 
-export const getScheduleFailure = error => (
+export const getScheduleAsynsSuccess = data => (
+	{
+			type: GET_SCHEDULE_SUCCESS,
+			payload: data
+	}
+)
+
+export const getScheduleAsynsFailure = error => (
 	{
 			type: GET_SCHEDULE_FAILURE,
 			payload: error
 	}
 )
-
-export const getScheduleAsync = (group) => {
-	return async (dispatch) => {
-		try {
-            dispatch(showLoader())
-			const { data } = await axios.get(`https://my-json-server.typicode.com/iamkoks/shedule_db/${group}`)
-            dispatch(getSchedule(data))
-            dispatch(hideLoader())
-		}
-		catch(error) {
-			dispatch(getScheduleFailure(error))
-		}
-	}
-}
-

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getScheduleAsync } from '../../store/actions/schedule';
+import { getScheduleAsyns } from '../../store/actions/schedule';
 import Loader from '../Loader';
 import Day from './Day';
 
@@ -12,7 +12,7 @@ const Schedule = () => {
   const schedule = useSelector(state => state.schedule.schedule)
   const isLoading = useSelector(state => state.loading.isLoading)
   useEffect(()=> {
-    dispatch(getScheduleAsync(group))
+    dispatch(getScheduleAsyns(group))
      // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [group])
   return(
