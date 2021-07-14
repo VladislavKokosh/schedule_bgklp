@@ -10,17 +10,14 @@ import {
   hideLoader,
   showLoader
 } from '../actions/loader'
+import { IContacts } from '../types/contacts';
 
 export function* getContacts() {
   try {
-    yield put(showLoader());
-
-    const { data } = yield call(() => axios.get('https://my-json-server.typicode.com/iamkoks/shedule_db/contacts'))
-    yield put(getContactsAsyncSuccess(data))
-    yield put(hideLoader())
+    const { data } = yield call(() => axios.get<IContacts[]>('https://my-json-server.typicode.com/iamkoks/shedule_db/contacts'))
+    yield put(getContactsAsyncSuccess({contacts : data}))
   }
   catch(error) {
-    yield put(getContactsAsyncFailure(error))
-    yield put(hideLoader())
+    yield put(getContactsAsyncFailure({error: error}))
   }
 }

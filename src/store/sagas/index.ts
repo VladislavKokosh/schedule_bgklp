@@ -1,6 +1,6 @@
 import { all, takeEvery } from "redux-saga/effects";
 
-import { GET_CONTACTS } from "../types/contatcs";
+import { GET_CONTACTS } from "../types/contacts";
 
 import {
   GET_GROUP,

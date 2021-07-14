@@ -5,10 +5,10 @@ import { loaderReducer } from './loaderReducer'
 import { scheduleReducer } from './scheduleReducer'
 import { teachersReducer } from './teachersReducer'
 
-export const reducer = combineReducers({
-  groups: groupsReducer,
-  schedule: scheduleReducer,
-  loading: loaderReducer,
-  teachers: teachersReducer,
+const reducer = combineReducers({
   contacts: contactsReducer
 })
+
+export type AppState = ReturnType<typeof reducer>
+
+export default reducer;

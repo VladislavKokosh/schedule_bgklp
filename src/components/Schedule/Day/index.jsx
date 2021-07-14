@@ -14,7 +14,10 @@ const Day = ({ day }) => {
         <span>Кабинет:</span>
       </div>
         {day.disciplines.map((discipline, index) =>(
-          <Discipline discipline={discipline} key={index}/>
+          <Discipline
+            discipline={discipline}
+            key={index}
+          />
         ))}
     </div>
   )
