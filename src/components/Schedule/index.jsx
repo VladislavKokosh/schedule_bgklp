@@ -19,7 +19,7 @@ const Schedule = () => {
     <div className='schedule'>
       {isLoading ?
         <Loader/>:
-        schedule.map((day, index) =>
+        schedule?.map((day, index) =>
           <Day key={index} day={day}/>
         )
       }

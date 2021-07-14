@@ -17,8 +17,7 @@ import {
 import { getContacts } from "./contacts";
 
 import {
-  getGroups,
-  setGroups
+  getGroups
 } from "./groups";
 
 import { getSchedule } from "./schedule";
@@ -30,7 +29,6 @@ import {
 
 function* watchGroups() {
   yield takeEvery(GET_GROUP, getGroups);
-  yield takeEvery(SET_GROUP, setGroups);
 }
 
 function* watchSchedule() {
