@@ -24,12 +24,10 @@ const Discipline:FC<IProps> = ({ discipline }) => {
   const Change = () => {
     dispatch(selectTeacherAsync(discipline.teacher))
     setVisableModal('flex')
-    console.log(discipline.teacher);
   }
 
   const reChange = () => {
     setVisableModal('none')
-    dispatch(selectTeacherAsync(''))
   }
 
   return(

@@ -1,5 +1,6 @@
+import { selectTeacherSelector } from './../selectors/teachers';
 import axios from 'axios'
-import { put, call } from 'redux-saga/effects'
+import { put, call, select } from 'redux-saga/effects'
 
 import {
   ITeachers,
@@ -34,11 +35,18 @@ export function* getTeachers() {
 
 export function* selectTeacher({payload}:SelectTeacherRequest) {
   try {
-    const { data } = yield call(() => axios.get<ITeachers[]>(`https://my-json-server.typicode.com/iamkoks/shedule_db/teachers`));
-    let searchTeacher = data.find((item:ITeachers) => item.name === payload)
-    yield put(selectTeacherAsynsSuccess(searchTeacher));
+    const selectedTeacher:ITeachers = yield select(selectTeacherSelector)
+
+    if(selectedTeacher.name !== payload || selectedTeacher.name === '') {
+      yield put(showLoader());
+      const { data } = yield call(() => axios.get<ITeachers[]>(`https://my-json-server.typicode.com/iamkoks/shedule_db/teachers`));
+      let searchTeacher = data.find((item:ITeachers) => item.name === payload)
+      yield put(selectTeacherAsynsSuccess({selectTeacher: searchTeacher}));
+      yield put(hideLoader())
+    }
   }
   catch(error) {
     yield put(selectTeacherAsynsFailure(error))
+    yield put(hideLoader())
   }
 }

@@ -26,8 +26,8 @@ const Groups:FC = () => {
       <h2>Расписание занятий для студентов БГКЛП</h2>
       <h4>{date.getMonth() > 6 ? 'первый семестр, '+(date.getFullYear()-1)+'-'+date.getFullYear()+' учебный год': 'второй семестр, '+(date.getFullYear()-1)+'-'+date.getFullYear()+' учебный год'}</h4>
       <div className='select'>
-        <select onChange={(e) => selectGroup(e)} disabled={!groups.length}>
-          <option value="" disabled selected>Выберите группу...</option>
+        <select onChange={(e) => selectGroup(e)} disabled={!groups.length} defaultValue={'Выберите группу...'}>
+          <option value="Выберите группу..." disabled>Выберите группу...</option>
           {groups?.map((group) => <option key={group.id} value={group.title}>{group.title}</option>)}
         </select>
       </div>
