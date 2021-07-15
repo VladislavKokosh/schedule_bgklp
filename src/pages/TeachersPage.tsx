@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import Teachers from '../components/Teachers'
 
-const TeachersPage = () => {
+const TeachersPage: FC = () => {
   return (
     <>
       <Teachers/>

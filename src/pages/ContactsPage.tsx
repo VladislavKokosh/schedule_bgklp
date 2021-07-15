@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import Contacts from '../components/Contacts'
 
-const ContactPage = () => {
+const ContactPage: FC = () => {
   return (
     <>
       <Contacts/>
