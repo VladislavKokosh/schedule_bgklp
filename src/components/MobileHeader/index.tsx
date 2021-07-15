@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, FC } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import { LOGO, MENU_BUTTON, MENU_BUTTON_CLOSE } from '../../image'
@@ -7,9 +7,9 @@ import './index.scss'
 
 import HeaderItem from './HeaderItem'
 
-const MobileHeader = () => {
+const MobileHeader: FC = () => {
   const history = useHistory()
-  const [visibility, setVisibility] = useState('translate3d(0,-100%,0)')
+  const [visibility, setVisibility] = useState<string>('translate3d(0,-100%,0)')
   return (
     <div className='mobile__header'>
       <div className='mobile__header__container'>
@@ -56,7 +56,6 @@ const MobileHeader = () => {
                     link={elem.link}
                     title={elem.title}
                     key={elem.title}
-                    onChange={() => setVisibility('translate3d(0,-100%,0)')}
                   />
                 ))
               }
