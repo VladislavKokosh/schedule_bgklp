@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import './index.scss'
 
-const HomePage = () => {
+const HomePage: FC = () => {
   return(
     <div>
       <h1>
