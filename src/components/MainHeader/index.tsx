@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import Header from '../Header';
 import MobileHeader from '../MobileHeader';
 
-const MainHeader = () => {
-  const [isMobile, setIsmobile] = useState(false);
+const MainHeader: FC = () => {
+  const [isMobile, setIsmobile] = useState<boolean>(false);
 
   useEffect(() => {
     const resize = () =>  {
