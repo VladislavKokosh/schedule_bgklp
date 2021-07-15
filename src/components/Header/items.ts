@@ -1,4 +1,9 @@
-export const items = [
+interface IItem {
+  title: string
+  link: string
+}
+
+export const items:IItem[] = [
   {
     title: 'Расписание',
     link: '/schedule'
