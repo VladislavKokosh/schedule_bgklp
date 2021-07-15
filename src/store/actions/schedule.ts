@@ -1,13 +1,15 @@
 
-import { GetScheduleSuccess, ScheduleFailurePayload, ScheduleSuccessPayload, GetScheduleFailure, SchedulePayload } from './../types/schedule';
-import
-	{
-    GetScheduleRequest,
-		GET_SCHEDULE,
-		GET_SCHEDULE_FAILURE,
-    GET_SCHEDULE_SUCCESS,
-	}
-from '../types/schedule'
+import {
+  GET_SCHEDULE,
+  GET_SCHEDULE_FAILURE,
+  GET_SCHEDULE_SUCCESS,
+  GetScheduleSuccess,
+  ScheduleFailurePayload,
+  ScheduleSuccessPayload,
+  GetScheduleFailure,
+  GetScheduleRequest,
+  SchedulePayload
+} from './../types/schedule';
 
 export const getScheduleAsyns = (
   group: SchedulePayload
@@ -22,8 +24,8 @@ export const getScheduleAsynsSuccess = (
   data:ScheduleSuccessPayload
 ) : GetScheduleSuccess => (
 	{
-			type: GET_SCHEDULE_SUCCESS,
-			payload: data
+    type: GET_SCHEDULE_SUCCESS,
+    payload: data
 	}
 )
 

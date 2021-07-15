@@ -1,10 +1,11 @@
-import { TeachersActions, TeachersState } from './../types/teachers';
 import
   {
     GET_TEACHERS_FAILURE,
     GET_TEACHERS_SUCCESS,
     SELECT_TEACHERS_FAILURE,
-    SELECT_TEACHERS_SUCCESS
+    SELECT_TEACHERS_SUCCESS,
+    TeachersActions,
+    TeachersState
   }
 from "../types/teachers"
 

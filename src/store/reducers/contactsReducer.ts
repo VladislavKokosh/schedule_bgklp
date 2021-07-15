@@ -1,11 +1,9 @@
-import
-  {
-    GET_CONTACTS_FAILURE,
-    GET_CONTACTS_SUCCESS
-  }
-from "../types/contacts"
-
-import { ContactsActions, ContactsState } from "../types/contacts"
+import {
+  GET_CONTACTS_FAILURE,
+  GET_CONTACTS_SUCCESS,
+  ContactsActions,
+  ContactsState
+} from "../types/contacts"
 
 const initState: ContactsState = {
   contacts: [],

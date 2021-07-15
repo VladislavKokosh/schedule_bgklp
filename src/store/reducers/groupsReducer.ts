@@ -1,9 +1,9 @@
-import { SET_GROUP } from './../types/groups';
 import
   {
     CLEAR_GROUP,
     GET_GROUP_FAILURE,
     GET_GROUP_SUCCESS,
+    SET_GROUP,
     GroupsState,
     GroupsActions
   }

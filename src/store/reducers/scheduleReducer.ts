@@ -1,8 +1,9 @@
-import { ScheduleActions, ScheduleState } from './../types/schedule';
 import
   {
     GET_SCHEDULE_FAILURE,
-    GET_SCHEDULE_SUCCESS
+    GET_SCHEDULE_SUCCESS,
+    ScheduleActions,
+    ScheduleState
   }
 from "../types/schedule"
 

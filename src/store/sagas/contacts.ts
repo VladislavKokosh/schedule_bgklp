@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { put, call } from 'redux-saga/effects'
 
+import { IContacts } from '../types/contacts';
+
 import {
   getContactsAsyncFailure,
   getContactsAsyncSuccess
@@ -10,7 +12,7 @@ import {
   hideLoader,
   showLoader
 } from '../actions/loader'
-import { IContacts } from '../types/contacts';
+
 
 export function* getContacts() {
   try {

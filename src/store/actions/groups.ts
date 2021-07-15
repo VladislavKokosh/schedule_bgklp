@@ -1,18 +1,16 @@
-import { ClearGroup } from './../types/groups';
-import
-	{
-		GET_GROUP,
-		GET_GROUP_FAILURE,
-		GET_GROUP_SUCCESS,
-		SET_GROUP,
-		CLEAR_GROUP,
-    GetGroupsRequest,
-    GetGroupsSuccess,
-    GetGroupsFailure,
-    GroupsSuccessPayload,
-    GroupsFailurePayload
-	}
-from '../types/groups'
+import {
+  GET_GROUP,
+  GET_GROUP_FAILURE,
+  GET_GROUP_SUCCESS,
+  SET_GROUP,
+  CLEAR_GROUP,
+  GetGroupsRequest,
+  GetGroupsSuccess,
+  GetGroupsFailure,
+  GroupsSuccessPayload,
+  GroupsFailurePayload,
+  ClearGroup
+} from '../types/groups'
 
 export const getGroupsAsync = (): GetGroupsRequest => ({
 	type: GET_GROUP
@@ -33,7 +31,7 @@ export const getGroupsAsyncFailure = (
 })
 
 export const setGroupsAsyncSuccess = (
-  data: string
+	data: string
 ) => ({
 	type: SET_GROUP,
 	payload: data

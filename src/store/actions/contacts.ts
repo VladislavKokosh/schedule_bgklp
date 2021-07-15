@@ -1,15 +1,13 @@
-import
-	{
-    ContactsFailurePayload,
-    ContactsSuccessPayload,
-    GetContactsFailure,
-    GetContactsSuccess,
-    GetContactsRequest,
-    GET_CONTACTS,
-    GET_CONTACTS_FAILURE,
-    GET_CONTACTS_SUCCESS
-  }
-from '../types/contacts'
+import {
+  ContactsFailurePayload,
+  ContactsSuccessPayload,
+  GetContactsFailure,
+  GetContactsSuccess,
+  GetContactsRequest,
+  GET_CONTACTS,
+  GET_CONTACTS_FAILURE,
+  GET_CONTACTS_SUCCESS
+} from '../types/contacts'
 
 export const getContactsAsync = (): GetContactsRequest => (
 	{

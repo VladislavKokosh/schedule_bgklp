@@ -1,11 +1,16 @@
-import { selectTeacherAsynsSuccess, selectTeacherAsynsFailure } from './../actions/teachers';
-import { ITeachers,SelectTeacherRequest }  from './../types/teachers';
 import axios from 'axios'
 import { put, call } from 'redux-saga/effects'
 
 import {
+  ITeachers,
+  SelectTeacherRequest
+}  from './../types/teachers';
+
+import {
   getTeachersAsynsFailure,
-  getTeachersAsynsSuccess
+  getTeachersAsynsSuccess,
+  selectTeacherAsynsSuccess,
+  selectTeacherAsynsFailure
 } from '../actions/teachers';
 
 import {

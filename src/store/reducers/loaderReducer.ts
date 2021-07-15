@@ -1,11 +1,9 @@
-import
-  {
-    SHOW_LOADER,
-    HIDE_LOADER,
-    LoaderActions,
-    LoaderState
-  }
-from "../types/loader"
+import {
+  SHOW_LOADER,
+  HIDE_LOADER,
+  LoaderActions,
+  LoaderState
+} from "../types/loader"
 
 const initState:LoaderState = {
   isLoading: true
