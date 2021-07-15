@@ -18,11 +18,11 @@ import { getContacts } from "./contacts";
 import {
   getGroups
 } from "./groups";
-
 import { getSchedule } from "./schedule";
 
+
 import {
-  getTeachers
+  getTeachers, selectTeacher
 } from "./teachers";
 
 function* watchGroups() {
@@ -35,6 +35,7 @@ function* watchSchedule() {
 
 function* watchTeachers() {
   yield takeEvery(GET_TEACHERS, getTeachers);
+  yield takeEvery(SELECT_TEACHER, selectTeacher);
 }
 
 function* watchContacts() {

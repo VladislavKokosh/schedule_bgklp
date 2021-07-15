@@ -1,4 +1,4 @@
-import { TeachersActions, SELECT_TEACHER } from './../types/teachers';
+import { TeachersActions } from './../types/teachers';
 import
   {
     GET_TEACHERS_FAILURE,
@@ -21,8 +21,10 @@ export const teachersReducer = (state = initState, action: TeachersActions) => {
             return { ...state, teachers: action.payload.teachers}
         case GET_TEACHERS_FAILURE:
             return { ...state, error: action.payload.error}
-        case SELECT_TEACHER:
+        case SELECT_TEACHERS_SUCCESS:
             return { ...state, selectTeacher: action.payload}
+        case SELECT_TEACHERS_FAILURE:
+          return { ...state, error: action.payload.error}
         default: return state
     }
 }

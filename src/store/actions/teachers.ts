@@ -44,11 +44,29 @@ export const getTeachersAsynsFailure = (
 	}
 )
 
-export const selectTeacherAsync = (
-  teacher: ITeachers
-):SelectTeacherRequest => (
-  {
-    type: SELECT_TEACHER,
-    payload: teacher
-  }
+export const selectTeacherAsyns = (
+  group: string
+) : SelectTeacherRequest => (
+	{
+		type: SELECT_TEACHER,
+    payload: group
+	}
+)
+
+export const selectTeacherAsynsSuccess = (
+  data:SelectTeacherSuccessPayload
+) : SelectTeacherSuccess => (
+	{
+			type: SELECT_TEACHERS_SUCCESS,
+			payload: data
+	}
+)
+
+export const selectTeacherAsynsFailure = (
+  error:TeachersFailurePayload
+): SelectTeacherFailure => (
+	{
+			type: SELECT_TEACHERS_FAILURE,
+			payload: error
+	}
 )

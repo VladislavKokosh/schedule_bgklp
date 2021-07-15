@@ -46,7 +46,7 @@ export type GetTeachersFailure = {
 
 export type SelectTeacherRequest = {
   type: typeof SELECT_TEACHER;
-  payload: ITeachers
+  payload: string
 }
 
 export type SelectTeacherSuccess = {

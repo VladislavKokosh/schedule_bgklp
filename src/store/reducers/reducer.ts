@@ -9,7 +9,8 @@ const reducer = combineReducers({
   contacts: contactsReducer,
   groups: groupsReducer,
   loader: loaderReducer,
-  teachers: teachersReducer
+  teachers: teachersReducer,
+  schedule: scheduleReducer
 })
 
 export type AppState = ReturnType<typeof reducer>

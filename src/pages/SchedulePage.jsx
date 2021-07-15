@@ -8,9 +8,9 @@ const SсhedulePage = () => {
   return (
     <>
       <Groups/>
-      {/* {group === 'Выберите группу...' ? null :
+      {group === 'Выберите группу...' ? null :
       group === null ? null :
-      <Schedule/>} */}
+      <Schedule/>}
     </>
   )
 }

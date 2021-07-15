@@ -16,7 +16,7 @@ const Discipline = ({ discipline }) => {
 
   const reChange = () => {
     setVisableModal('none')
-    dispatch(selectTeacherAsync(null))
+    dispatch(selectTeacherAsync(''))
   }
 
   return(
