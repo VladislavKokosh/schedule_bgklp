@@ -7,7 +7,8 @@ import { teachersReducer } from './teachersReducer'
 
 const reducer = combineReducers({
   contacts: contactsReducer,
-  groups: groupsReducer
+  groups: groupsReducer,
+  loader: loaderReducer
 })
 
 export type AppState = ReturnType<typeof reducer>
