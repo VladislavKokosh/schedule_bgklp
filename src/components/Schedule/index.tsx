@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, FC } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getScheduleAsyns } from '../../store/actions/schedule';
 import { getGroupSelector } from '../../store/selectors/groups';
@@ -9,7 +9,7 @@ import Day from './Day';
 
 import './index.scss'
 
-const Schedule = () => {
+const Schedule:FC = () => {
   const dispatch = useDispatch();
   const group = useSelector(getGroupSelector)
   const schedule = useSelector(getScheduleSelector)
