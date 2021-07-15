@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 interface IProps {
   name: string
@@ -6,12 +6,12 @@ interface IProps {
   phone: string
 }
 
-const Contact: React.FC<IProps> = ({ name, position, phone }) => {
+const Contact: FC<IProps> = ({ name, position, phone }) => {
   return(
     <div className='contacts__item'>
       <h1 className='contacts__item_title'>{name}</h1>
       <div className='contacts__item_about'>
-        <span className='contacts__item_about-position'>{position} </span>
+        <span className='contacts__item_about-position'>{position}</span>
         <a
           className='contacts__item_about-phone'
           href={`tel:${phone}`}
