@@ -1,36 +1,41 @@
 import { all, takeEvery } from "redux-saga/effects";
 
-import { GET_CONTACTS } from "../types/contatcs";
+import {
+  GET_CONTACTS
+} from "../types/contacts";
 
 import {
-  GET_GROUP,
-  SET_GROUP
+  GET_GROUP
 } from "../types/groups";
 
-import { GET_SCHEDULE } from "../types/schedule";
+import {
+  GET_SCHEDULE
+} from "../types/schedule";
 
 import {
   GET_TEACHERS,
   SELECT_TEACHER
 } from "../types/teachers";
 
-import { getContacts } from "./contacts";
+import {
+  getContacts
+} from "./contacts";
 
 import {
-  getGroups,
-  setGroups
+  getGroups
 } from "./groups";
 
-import { getSchedule } from "./schedule";
+import {
+  getSchedule
+} from "./schedule";
+
 
 import {
-  getTeachers,
-  selectTeacher
+  getTeachers, selectTeacher
 } from "./teachers";
 
 function* watchGroups() {
   yield takeEvery(GET_GROUP, getGroups);
-  yield takeEvery(SET_GROUP, setGroups);
 }
 
 function* watchSchedule() {

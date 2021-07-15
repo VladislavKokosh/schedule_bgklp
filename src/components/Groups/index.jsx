@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { getGroupsAsync, setGroupsAsync } from '../../store/actions/groups';
+import { getGroupsAsync, setGroupsAsyncSuccess } from '../../store/actions/groups';
+import { getGroupsSelector } from '../../store/selectors/groups';
 import './index.scss'
 
 const Groups = () => {
   const dispatch = useDispatch();
-  const groups = useSelector(state => state.groups.groups)
+  const groups = useSelector(getGroupsSelector)
   useEffect(()=> {
     dispatch(getGroupsAsync())
      // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -15,7 +16,7 @@ const Groups = () => {
   let date = new Date();
 
   const selectGroup = (e) => {
-    dispatch(setGroupsAsync(e.target.value))
+    dispatch(setGroupsAsyncSuccess(e.target.value))
   }
 
   return(

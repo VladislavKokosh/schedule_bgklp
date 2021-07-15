@@ -1,14 +1,18 @@
+import { groupsReducer } from './groupsReducer';
 import { combineReducers } from 'redux'
 import { contactsReducer } from './contactsReducer'
-import { groupsReducer } from './groupsReducer'
 import { loaderReducer } from './loaderReducer'
 import { scheduleReducer } from './scheduleReducer'
 import { teachersReducer } from './teachersReducer'
 
-export const reducer = combineReducers({
+const reducer = combineReducers({
+  contacts: contactsReducer,
   groups: groupsReducer,
-  schedule: scheduleReducer,
-  loading: loaderReducer,
+  loader: loaderReducer,
   teachers: teachersReducer,
-  contacts: contactsReducer
+  schedule: scheduleReducer
 })
+
+export type AppState = ReturnType<typeof reducer>
+
+export default reducer;

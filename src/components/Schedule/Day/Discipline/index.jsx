@@ -1,22 +1,23 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectTeacherAsync } from '../../../../store/actions/teachers';
-
 import { LOADING } from '../../../../image';
+import { selectTeacherAsync } from '../../../../store/actions/teachers';
+import { getTeachersSelector } from '../../../../store/selectors/teachers';
 
 const Discipline = ({ discipline }) => {
   const dispatch = useDispatch();
   const [visableModal, setVisableModal] = useState('none')
-  const selectTeacher = useSelector(state => state.teachers.selectTeacher)
+  const selectTeacher = useSelector(getTeachersSelector)
 
   const Change = () => {
     dispatch(selectTeacherAsync(discipline.teacher))
     setVisableModal('flex')
+    console.log(discipline.teacher);
   }
 
   const reChange = () => {
     setVisableModal('none')
-    dispatch(selectTeacherAsync(null))
+    dispatch(selectTeacherAsync(''))
   }
 
   return(
