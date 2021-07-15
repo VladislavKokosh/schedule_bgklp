@@ -3,8 +3,7 @@ import { all, takeEvery } from "redux-saga/effects";
 import { GET_CONTACTS } from "../types/contacts";
 
 import {
-  GET_GROUP,
-  SET_GROUP
+  GET_GROUP
 } from "../types/groups";
 
 import { GET_SCHEDULE } from "../types/schedule";
@@ -23,8 +22,7 @@ import {
 import { getSchedule } from "./schedule";
 
 import {
-  getTeachers,
-  selectTeacher
+  getTeachers
 } from "./teachers";
 
 function* watchGroups() {
@@ -37,7 +35,6 @@ function* watchSchedule() {
 
 function* watchTeachers() {
   yield takeEvery(GET_TEACHERS, getTeachers);
-  yield takeEvery(SELECT_TEACHER, selectTeacher);
 }
 
 function* watchContacts() {
