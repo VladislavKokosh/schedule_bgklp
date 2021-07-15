@@ -3,7 +3,7 @@ import React from 'react'
 import './index.scss'
 
 interface IProps {
-  img: string
+  img?: string
   name: string
   about: string
 }

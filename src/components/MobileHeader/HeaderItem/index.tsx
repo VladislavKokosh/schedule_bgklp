@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { clearGroup } from '../../../store/actions/groups'
 
 import './index.scss'
 
+interface IProps {
+  title: string
+  link: string
+}
 
-const HeaderItem = ({ title, link }) => {
+const HeaderItem:FC<IProps> = ({ title, link }) => {
   const history = useHistory()
-  const dispatch = useDispatch()
   const { pathname } = useLocation()
 
   return (
@@ -16,7 +17,6 @@ const HeaderItem = ({ title, link }) => {
       className={`header-mobile-item ${pathname === link ? 'header-mobile-item_active' : ''}`}
       onClick={() => {
         history.push(link)
-        dispatch(clearGroup())
       }}
     >
       {title}

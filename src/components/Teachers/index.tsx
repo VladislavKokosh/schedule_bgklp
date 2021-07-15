@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, FC } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getTeachersAsync } from '../../store/actions/teachers';
 
-import Teacher from './Teacher/index.tsx'
+import Teacher from './Teacher/index'
 import Loader from '../Loader'
 import './index.scss'
 import { getTeachersSelector } from '../../store/selectors/teachers';
 import { getLoaderSelector } from '../../store/selectors/loader';
 
-const Teachers = () => {
+const Teachers:FC = () => {
   const dispatch = useDispatch();
   const teachers = useSelector(getTeachersSelector)
   const isLoading = useSelector(getLoaderSelector)

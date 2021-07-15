@@ -20,10 +20,6 @@ export interface ScheduleState {
   error: string
 }
 
-export interface SchedulePayload {
-  schedule: string
-}
-
 export interface ScheduleSuccessPayload {
   schedule: ISchedule[]
 }
@@ -34,7 +30,7 @@ export interface ScheduleFailurePayload {
 
 export type GetScheduleRequest = {
   type: typeof GET_SCHEDULE;
-  payload: SchedulePayload;
+  payload: string;
 }
 
 export type GetScheduleSuccess = {

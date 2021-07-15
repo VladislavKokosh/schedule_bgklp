@@ -7,12 +7,11 @@ import {
   ScheduleFailurePayload,
   ScheduleSuccessPayload,
   GetScheduleFailure,
-  GetScheduleRequest,
-  SchedulePayload
+  GetScheduleRequest
 } from './../types/schedule';
 
 export const getScheduleAsyns = (
-  group: SchedulePayload
+  group: string
 ) : GetScheduleRequest => (
 	{
 		type: GET_SCHEDULE,

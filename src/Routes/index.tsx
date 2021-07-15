@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
 import HomePage from '../pages/HomePage'
@@ -6,7 +6,7 @@ import SсhedulePage from '../pages/SchedulePage'
 import TeachersPage from '../pages/TeachersPage'
 import Contacts from '../components/Contacts'
 
-const Routes = () => {
+const Routes: FC = () => {
   return (
     <Switch>
       <Route exact path="/" component={HomePage}/>

@@ -3,6 +3,7 @@ export const GET_CONTACTS_SUCCESS='CONTACTS/GET CONTACTS SUCCESS';
 export const GET_CONTACTS_FAILURE='CONTACTS/GET CONTACTS FAILURE';
 
 export interface IContacts {
+  id: string
   name: string
   position: string
   phone: string

@@ -1,23 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, FC} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { LOADING } from '../../../../image';
 import { selectTeacherAsync } from '../../../../store/actions/teachers';
-import { getTeachersSelector } from '../../../../store/selectors/teachers';
+import { selectTeacherSelector } from '../../../../store/selectors/teachers';
 
-const Discipline = ({ discipline }) => {
+interface IDiscipline {
+  time: string
+  name: string
+  teacher: string
+  link?: string
+  cabinet: string
+}
+
+interface IProps {
+  discipline: IDiscipline
+}
+
+const Discipline:FC<IProps> = ({ discipline }) => {
   const dispatch = useDispatch();
   const [visableModal, setVisableModal] = useState('none')
-  const selectTeacher = useSelector(getTeachersSelector)
+  const selectTeacher = useSelector(selectTeacherSelector)
 
   const Change = () => {
     dispatch(selectTeacherAsync(discipline.teacher))
     setVisableModal('flex')
-    console.log(discipline.teacher);
   }
 
   const reChange = () => {
     setVisableModal('none')
-    dispatch(selectTeacherAsync(''))
   }
 
   return(

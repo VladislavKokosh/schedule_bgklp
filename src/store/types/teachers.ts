@@ -7,7 +7,7 @@ export const SELECT_TEACHERS_FAILURE = 'TEACHERS/SELECT TEACHERS FAILURE'
 
 export interface ITeachers {
   id: string
-  img: string
+  img?: string
   name: string
   about: string
 }

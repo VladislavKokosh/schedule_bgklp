@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import Discipline from './Discipline'
 import './index.scss'
 
-const Day = ({ day }) => {
+interface IProps {
+  day: {
+    day: string
+    disciplines: IDiscipline[]
+  }
+}
+
+interface IDiscipline {
+  time: string
+  name: string
+  teacher: string
+  link?: string
+  cabinet: string
+}
+
+const Day:FC<IProps> = ({ day }) => {
   return(
     <div className='day'>
       <div className='day__name'>{day.day}</div>

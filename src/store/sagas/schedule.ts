@@ -19,7 +19,6 @@ import {
 export function* getSchedule({payload}:GetScheduleRequest) {
   try {
     yield put(showLoader());
-    console.log(payload)
     const { data } = yield call(() => axios.get<ISchedule[]>(`https://my-json-server.typicode.com/iamkoks/shedule_db/${payload}`));
 
     yield put(getScheduleAsynsSuccess({schedule: data}));

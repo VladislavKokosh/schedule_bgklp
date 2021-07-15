@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, FC } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getContactsAsync } from '../../store/actions/contacts';
 import { getContactsSelector } from '../../store/selectors/contacts';
 import { getLoaderSelector } from '../../store/selectors/loader';
 
 import Loader from '../Loader';
-import Contact from './Contact/index.tsx';
+import Contact from './Contact';
 
 import './index.scss'
 
-const Contacts = () => {
+const Contacts:FC = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContactsSelector);
   const isLoading = useSelector(getLoaderSelector)

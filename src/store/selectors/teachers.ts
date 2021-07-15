@@ -6,5 +6,5 @@ const selectTeacher = (state: AppState) => state.teachers.selectTeacher;
 const getError = (state: AppState) => state.groups.error;
 
 export const getTeachersSelector = createSelector(getTeachers, (teachers) => teachers);
-export const selectTeacherSelector = createSelector(selectTeacher, (teacher) => teacher);
+export const selectTeacherSelector = createSelector(selectTeacher, (selectTeacher) => selectTeacher);
 export const getErrorSelector = createSelector(getError, (error) => error);

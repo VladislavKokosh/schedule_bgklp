@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import HeaderItem from './HeaderItem'
-import { items } from './items.js'
+import { items } from './items'
 import { LOGO } from '../../image/index.js'
 
 import './index.scss'
 
-const Header = () => {
+const Header: FC = () => {
   const history = useHistory()
 
   return(
