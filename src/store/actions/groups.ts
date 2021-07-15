@@ -10,8 +10,7 @@ import
     GetGroupsSuccess,
     GetGroupsFailure,
     GroupsSuccessPayload,
-    GroupsFailurePayload,
-    SetGroupsRequest
+    GroupsFailurePayload
 	}
 from '../types/groups'
 

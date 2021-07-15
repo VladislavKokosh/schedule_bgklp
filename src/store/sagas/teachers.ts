@@ -29,14 +29,11 @@ export function* getTeachers() {
 
 export function* selectTeacher({payload}:SelectTeacherRequest) {
   try {
-    yield put(showLoader());
-    const { data } = yield call(() => axios.get<ITeachers[]>(`https://my-json-server.typicode.com/iamkoks/shedule_db/${payload}`));
+    const { data } = yield call(() => axios.get<ITeachers[]>(`https://my-json-server.typicode.com/iamkoks/shedule_db/teachers`));
     let searchTeacher = data.find((item:ITeachers) => item.name === payload)
     yield put(selectTeacherAsynsSuccess(searchTeacher));
-    yield put(hideLoader());
   }
   catch(error) {
-    yield put(hideLoader());
     yield put(selectTeacherAsynsFailure(error))
   }
 }

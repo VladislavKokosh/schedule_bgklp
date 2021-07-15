@@ -1,18 +1,17 @@
-import { TeachersActions } from './../types/teachers';
+import { TeachersActions, TeachersState } from './../types/teachers';
 import
   {
     GET_TEACHERS_FAILURE,
     GET_TEACHERS_SUCCESS,
     SELECT_TEACHERS_FAILURE,
-    SELECT_TEACHERS_SUCCESS,
-    TeachersState
+    SELECT_TEACHERS_SUCCESS
   }
 from "../types/teachers"
 
-const initState:TeachersState = {
+const initState: TeachersState = {
   teachers: [],
   error: '',
-  selectTeacher: {id: '', img: '',name: '' ,about: ''}
+  selectTeacher: {id: '', img: '', name: '' , about: ''}
 }
 
 export const teachersReducer = (state = initState, action: TeachersActions) => {
@@ -22,7 +21,7 @@ export const teachersReducer = (state = initState, action: TeachersActions) => {
         case GET_TEACHERS_FAILURE:
             return { ...state, error: action.payload.error}
         case SELECT_TEACHERS_SUCCESS:
-            return { ...state, selectTeacher: action.payload}
+            return { ...state, selectTeacher: action.payload.selectTeacher}
         case SELECT_TEACHERS_FAILURE:
           return { ...state, error: action.payload.error}
         default: return state

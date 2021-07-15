@@ -12,7 +12,6 @@ import
     TeachersFailurePayload,
     GetTeachersFailure,
     SelectTeacherSuccess,
-    ITeachers,
     SelectTeacherRequest,
     SelectTeacherSuccessPayload,
     SelectTeacherFailure
@@ -44,7 +43,7 @@ export const getTeachersAsynsFailure = (
 	}
 )
 
-export const selectTeacherAsyns = (
+export const selectTeacherAsync = (
   group: string
 ) : SelectTeacherRequest => (
 	{

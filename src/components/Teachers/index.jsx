@@ -21,7 +21,7 @@ const Teachers = () => {
     <div className='teachers'>
       {isLoading ?
         <Loader/>:
-        teachers.map(teacher =>
+        teachers?.map(teacher =>
         <Teacher
           img={teacher.img}
           name={teacher.name}
